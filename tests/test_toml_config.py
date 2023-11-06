@@ -1,6 +1,6 @@
 from argparse import Namespace
-from pydantic import BaseModel, ValidationError
-from configs.toml_config import main, config_file_path_exists, import_toml, get_config
+from pydantic import BaseModel
+from configs.toml_config import main, config_file_path_exists, import_toml
 
 # -------------------- CHANGE THESE TO SUIT THE TEST CASE -------------------- #
 good_file = Namespace(config_path="/home/jerry/Documents/GitRepos/toolsUI/tests/good.toml")
