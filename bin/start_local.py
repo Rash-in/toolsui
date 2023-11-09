@@ -17,8 +17,7 @@ app_path = os.path.dirname(bin_path)
 START_CHDIR = f"cd {app_path}"
 START_VENV = f". .env/bin/activate"
 ADD_ENV_VARS = f'export APP_PATH={app_path} && export PYTHONDONTWRITEBYTECODE="true"'
-COMMAND = START_CHDIR + " && " + ADD_ENV_VARS + " && "+ START_VENV
-
+COMMAND = START_CHDIR + " && " + START_VENV + " && "+ ADD_ENV_VARS
 def start_preconf():
     STARTCOMMAND_PRE = 'hypercorn --bind "0.0.0.0:5000" --worker-class "asyncio" --log-level "DEBUG" --error-logfile "-" --reload "main:toolsui"'
     all_command = COMMAND + " && " + STARTCOMMAND_PRE
