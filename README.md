@@ -13,6 +13,8 @@ Used to test various HTTP frontend frameworks. This is not yet ready to consume 
 - loguru: Logging framework
 - Jinja2: HTML Templating framework
 - pipdeptree: Used in testing scripts to show python package dependencies.
+- pytest: sync unit testing
+- pytest-asyncio: async unit testing 
 
 ## Environment Variables
 Environment variables are in `configs/toolsui.toml`. If the file is not present, create it.
